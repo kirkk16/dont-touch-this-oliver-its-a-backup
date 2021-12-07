@@ -1,0 +1,58 @@
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Classes</title>
+		<link rel="stylesheet" href="cubefield.css">
+    <!-- THREE.JS -->
+		<script src="three.js"></script>
+    <!-- CLASSES -->
+		<script src="cube.js"></script>
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+		<link rel="icon" href="https://ssl.gstatic.com/classroom/favicon.png">
+</head>
+<body>
+  <button class="newGame" id="newGame" type="button" onclick="gameReset()">New Game</button>
+  <div class="score" id="score">0.0</div>
+  <div class="highscore">Highscore:<br><span id="highScore">15.0</span></div>
+  <div class="instr">Press P to pause.</div>
+  <div class="info" id="info">
+	  <br><p style="font-family: 'Raleway';">By Kirk Polka and maybe oliver<br><br><br>Christmas update  <font style="font-size:25px;">&#127876;</font></p>
+  </div>
+  <div class="settings settingsVis" id="settings">
+    <div style="margin:0 auto;height:150px;width:100%;max-width:1398px">
+        <div class="group" id="difficulty">
+            <h3>Difficulty</h3>
+            <div class="select focus" onmousedown="updateDiff(0)" style="background-color:rgb(223, 0, 0)">Rookie</div>
+            <div class="select" onmousedown="updateDiff(1)" style="background-color:rgb(32, 220, 75)">Skilled</div>
+            <div class="select" onmousedown="updateDiff(2)" style="background-color:rgb(255, 255, 255);color:black;">Master</div>
+        </div>
+        <div class="group" id="camera">
+            <h3>Camera</h3>
+            <div class="select focus" onmousedown="updateCam(0)" style="background-color:rgb(223, 0, 0)">3rd Person</div>
+            <div class="select" onmousedown="updateCam(1)" style="background-color:rgb(32, 220, 75)">2nd Person?</div>
+            <div class="select" onmousedown="updateCam(2)" style="background-color:rgb(255, 255, 255);color:black;">1st Person</div>
+        </div>
+        <div class="group" id="block">
+            <h3>Blocks</h3>
+            <div class="select focus" onmousedown="updateBlock(0)" style="background-color:rgb(223, 0, 0)">Normal</div>
+            <div class="select" onmousedown="updateBlock(1)" style="background-color:rgb(32, 220, 75)">Falling</div>
+            <div class="select" onmousedown="updateBlock(2)" style="background-color:rgb(255, 255, 255);color:black;">Pop up</div>
+        </div>
+        <div class="group" id="bounce">
+            <h3>Bounce</h3>
+            <div class="select focus" onmousedown="updateBounce(0)" style="background-color:rgb(223, 0, 0)">None</div>
+            <div class="select" onmousedown="updateBounce(1)" style="background-color:rgb(32, 220, 75)">Enough</div>
+            <div class="select" onmousedown="updateBounce(2)" style="background-color:rgb(255, 255, 255);color:black;">Broken</div>
+        </div>
+    </div>
+  </div>
+  <div class="pause" id="pause">
+      <div class="menu" onmousedown="returnToMenu()">Return to Menu</div>
+      <div class="unpause" onmousedown="pauseGameScreen()">Resume</div>
+  </div>
+  <!-- js code -->
+  <script src="main.js"></script>
+</body>
+</html>
